@@ -1,94 +1,78 @@
 <!DOCTYPE html>
 <html>
- <head>
- <meta charset="utf-8"> 
-  <title> 🪐Hashan's Web site </title>
- </head>
- <body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-	 <div class="video-wrapper">
-  <video playsinline autoplay muted loop poster="cake.jpg">
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Heading</h1>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
 </div>
- <table cellspacing="40" >
-	<tr>
-		<td> <img src="hww.jpeg"alt="Hashan's pic"></td>
-		<td> <h1> Hashan Wickramasingha Wadanambi </h1>
-				<!-- <em> tag should be used for italic -->
-			<p> <em>Systems Engineer</em> </p>
-			<p> I am working as a Systems Engineer and Learning new techniologies is one of my hobbies </p></td>
-	</tr>
-</table>
 
-	<hr>
-	<h3> Education</h3>
-	<ul>
-		<strong><li> Bsc. Computer Systems and Networking , Curtin University </li>
-				<li> Post Graduate diploma in Diplomacy and World Affairs </li>
-		</strong>
-	</ul>
-	<hr>
-	
-	<h3> Hobbies </h3>
-	<ol type="i">
-		<li> Learn new technologies</li>
-		<li> Coocking </li>
-	</ol>
-	<hr>
-	<h3> Working Experience </h3>
-	<table border="1">
-		<thead>
-			<tr>
-				<th> Position </th>
-				<th> Yrard </th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td> Systems Engineer L3 </td>
-				<td> 2016 - present </td>
-			</tr>
-			
-			<tr> 
-				<td> Technical Project Manager </td>
-				<td> 2012 - 2016 </td>
-			</tr>
-	</table>
-	<hr>
-	<h3> Skills </h3>
-	
-	<table>
-	<tr>
-		<td>
-			<table cellspacing="10">
-			<tr>
-				<td> AZURE  </td>
-				<td> 🎇🎇🎇🎇🎇</td>
-			</tr>
-			<tr>
-				<td> AWS  </td>
-				<td> 🎇🎇🎇🎇🎇</td>
-			</tr>
-			</table>
-		</td>
-		<td>
-			<table cellspacing="10">
-			<tr>
-				<td> Networking  </td>
-				<td> 🎇🎇🎇🎇🎇</td>
-			</tr>
-			<tr>
-				<td> Backup  </td>
-				<td> 🎇🎇🎇🎇🎇</td>
-			</tr>
-			</table>
-		</td>
-	</tr>
-	
-	</table>
-		
- </body>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
 </html>
-  
